@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.0460d622.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.13a154bb.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.42db9d5e.js",
     "static/js/699.8d3f8926.chunk.js": "/goit-react-hw-05-movies/static/js/699.8d3f8926.chunk.js",
-    "static/js/991.0be4a7b7.chunk.js": "/goit-react-hw-05-movies/static/js/991.0be4a7b7.chunk.js",
+    "static/js/991.efb5a544.chunk.js": "/goit-react-hw-05-movies/static/js/991.efb5a544.chunk.js",
     "static/js/541.23b7203c.chunk.js": "/goit-react-hw-05-movies/static/js/541.23b7203c.chunk.js",
     "static/js/736.85fcaf66.chunk.js": "/goit-react-hw-05-movies/static/js/736.85fcaf66.chunk.js",
     "static/js/186.25192732.chunk.js": "/goit-react-hw-05-movies/static/js/186.25192732.chunk.js",
@@ -14,9 +14,9 @@
     "static/media/back-arrow.svg": "/goit-react-hw-05-movies/static/media/back-arrow.922c5c9c3b2e230a20742105537170e7.svg",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.0460d622.css.map": "/goit-react-hw-05-movies/static/css/main.0460d622.css.map",
-    "main.13a154bb.js.map": "/goit-react-hw-05-movies/static/js/main.13a154bb.js.map",
+    "main.42db9d5e.js.map": "/goit-react-hw-05-movies/static/js/main.42db9d5e.js.map",
     "699.8d3f8926.chunk.js.map": "/goit-react-hw-05-movies/static/js/699.8d3f8926.chunk.js.map",
-    "991.0be4a7b7.chunk.js.map": "/goit-react-hw-05-movies/static/js/991.0be4a7b7.chunk.js.map",
+    "991.efb5a544.chunk.js.map": "/goit-react-hw-05-movies/static/js/991.efb5a544.chunk.js.map",
     "541.23b7203c.chunk.js.map": "/goit-react-hw-05-movies/static/js/541.23b7203c.chunk.js.map",
     "736.85fcaf66.chunk.js.map": "/goit-react-hw-05-movies/static/js/736.85fcaf66.chunk.js.map",
     "186.25192732.chunk.js.map": "/goit-react-hw-05-movies/static/js/186.25192732.chunk.js.map",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.0460d622.css",
-    "static/js/main.13a154bb.js"
+    "static/js/main.42db9d5e.js"
   ]
 }
