@@ -1,16 +1,22 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { Header, NavLinkStyled, NavStyled } from './layout.styled';
+import { Container } from 'components/Container/Container.styled';
+import logo from '../img/searchmovies.png';
 
 const Layout = () => {
   return (
     <>
-      <header>
-        <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/movies">Movies</NavLink>
-        </nav>
-      </header>
-      <Outlet />
+      <Container>
+        <Header>
+          <img src={logo} alt="logo" width="170" />
+          <NavStyled>
+            <NavLinkStyled to="/">Home</NavLinkStyled>
+            <NavLinkStyled to="/movies">Movies</NavLinkStyled>
+          </NavStyled>
+        </Header>
+        <Outlet />
+      </Container>
     </>
   );
 };

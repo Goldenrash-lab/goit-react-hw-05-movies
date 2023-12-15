@@ -1,5 +1,6 @@
 import { getSearchMovie } from 'API/movieSearch';
 import SearchBar from 'components/SearchBar/SearchBar';
+import { StyledList } from 'components/TodayMoviesList/TodayMoviesList.styled';
 import { Notify } from 'notiflix';
 import React, { useEffect, useState } from 'react';
 import { DNA } from 'react-loader-spinner';
@@ -17,7 +18,6 @@ const Movies = () => {
         setIsLoading(true);
         const query = searchParams.get('search');
         const { results } = await getSearchMovie(query);
-        console.log(results);
         setMovies(results);
       } catch (error) {
         Notify.failure(error.message);
@@ -33,7 +33,7 @@ const Movies = () => {
     <>
       <SearchBar />
       {isLoading && <DNA />}
-      <ul>
+      <StyledList>
         {movies &&
           movies.map(el => {
             return (
@@ -44,7 +44,7 @@ const Movies = () => {
               </li>
             );
           })}
-      </ul>
+      </StyledList>
     </>
   );
 };

@@ -1,11 +1,23 @@
 import { getMovie } from 'API/movieDetail';
+import { StyledBtn, StyledBtnImage } from 'components/Button/Button.styled';
 import { Notify } from 'notiflix';
 import React, { useEffect, useState } from 'react';
 import { DNA } from 'react-loader-spinner';
 import { Outlet, useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import arrow from '../img/back-arrow.svg';
+import {
+  Heading4,
+  MovieDetailsInfo,
+  MovieImage,
+  MovieInfo,
+  MovieWrapper,
+  NavStyledLink,
+  Text,
+  TitleMovie,
+  WrapperLinks,
+} from 'components/MovieDetails/MovieDetails.styled';
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
@@ -28,32 +40,39 @@ const MovieDetails = () => {
 
     getMovieDetail();
   }, [movieId]);
-
   return (
     <>
-      <button onClick={() => navigate(location.state ?? '/movies')}>
-        Go back
-      </button>
       {isLoading && <DNA />}
+      <StyledBtn onClick={() => navigate(location.state ?? '/movies')}>
+        <StyledBtnImage src={arrow} alt="arrow" />
+      </StyledBtn>
       {movie && (
-        <div>
-          <img
-            src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-            alt={movie.title}
-            width="300"
-          />
-          <div>
-            <h2>{movie.title}</h2>
-            <p>User score - {movie.vote_average.toFixed(1)}/10</p>
-            <h4>Overview</h4>
-            <p>{movie.overview}</p>
-            <h4>Genres</h4>
-            <p>{movie.genres.map(el => el.name + ' ')}</p>
-          </div>
-          <Link to="cast">Cast</Link>
-          <Link to="reviews">Reviews</Link>
+        <MovieWrapper>
+          <MovieDetailsInfo>
+            <MovieImage
+              src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+              alt={movie.title}
+              width="300"
+            />
+            <MovieInfo>
+              <TitleMovie>{movie.title}</TitleMovie>
+              <Text>User score - {movie.vote_average.toFixed(1)}/10</Text>
+              <Heading4>Overview</Heading4>
+              <Text>{movie.overview}</Text>
+              <Heading4>Genres</Heading4>
+              <Text>{movie.genres.map(el => el.name + ' ')}</Text>
+            </MovieInfo>
+          </MovieDetailsInfo>
+          <WrapperLinks>
+            <NavStyledLink to="cast" state={location.state}>
+              Cast
+            </NavStyledLink>
+            <NavStyledLink to="reviews" state={location.state}>
+              Reviews
+            </NavStyledLink>
+          </WrapperLinks>
           <Outlet />
-        </div>
+        </MovieWrapper>
       )}
     </>
   );

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { getMoviesToday } from 'API/moviesToday';
 import { DNA } from 'react-loader-spinner';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Notify } from 'notiflix';
+import { Heading2, StyledLink, StyledList } from './TodayMoviesList.styled';
 
 const TodayMoviesList = () => {
   const [movies, setMovies] = useState(null);
@@ -35,17 +36,18 @@ const TodayMoviesList = () => {
           wrapperClass="dna-wrapper"
         />
       )}
-      <ul>
+      <Heading2>Trending today</Heading2>
+      <StyledList>
         {movies?.map(el => {
           return (
             <li key={el.id}>
-              <Link to={`movies/${el.id}`} state={location}>
+              <StyledLink to={`movies/${el.id}`} state={location}>
                 {el.title || el.name}
-              </Link>
+              </StyledLink>
             </li>
           );
         })}
-      </ul>
+      </StyledList>
     </>
   );
 };
