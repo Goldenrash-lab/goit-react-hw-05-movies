@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { FormStyled, Input, SearchBtn } from './SearchBar.styled';
 
 const SearchBar = () => {
   const [searchMovie, setSearchMovie] = useState('');
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  useEffect(() => {
-    const value = searchParams.get('search');
-    setSearchMovie(value ?? '');
-  }, [searchParams]);
+  const [, setSearchParams] = useSearchParams();
 
   function handleSubmit(e) {
     e.preventDefault();
-    const search = e.target.elements.search.value;
-    if (search) {
-      setSearchParams({ search });
+    if (searchMovie) {
+      setSearchParams({ search: searchMovie });
     }
   }
   function handleChange(e) {
