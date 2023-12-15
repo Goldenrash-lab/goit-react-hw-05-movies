@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { getMoviesToday } from 'API/moviesToday';
 import { DNA } from 'react-loader-spinner';
 import { useLocation } from 'react-router-dom';
 import { Notify } from 'notiflix';
 import { Heading2, StyledLink, StyledList } from './TodayMoviesList.styled';
+import { getMoviesToday } from 'API/api';
 
 const TodayMoviesList = () => {
   const [movies, setMovies] = useState(null);

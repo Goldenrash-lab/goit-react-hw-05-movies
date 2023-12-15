@@ -1,4 +1,4 @@
-import { getReviews } from 'API/movieReviews';
+import { getReviews } from 'API/api';
 import React, { useEffect, useState } from 'react';
 import { DNA } from 'react-loader-spinner';
 import { useParams } from 'react-router-dom';

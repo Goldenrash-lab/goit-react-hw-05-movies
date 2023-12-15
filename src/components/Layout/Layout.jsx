@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { Header, NavLinkStyled, NavStyled } from './layout.styled';
+import { Header, NavLinkStyled, NavStyled } from './Layout.styled';
 import { Container } from 'components/Container/Container.styled';
-import logo from '../img/searchmovies.png';
+import logo from '../../img/searchmovies.png';
 
 const Layout = () => {
   return (

@@ -1,4 +1,4 @@
-import { getSearchMovie } from 'API/movieSearch';
+import { getSearchMovie } from 'API/api';
 import SearchBar from 'components/SearchBar/SearchBar';
 import { StyledList } from 'components/TodayMoviesList/TodayMoviesList.styled';
 import { Notify } from 'notiflix';

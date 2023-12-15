@@ -1,7 +1,7 @@
-import { getCast } from 'API/movieCast';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ListCast } from './Cast.styled';
+import { getCast } from 'API/api';
 
 const Cast = () => {
   const [cast, setCast] = useState(null);

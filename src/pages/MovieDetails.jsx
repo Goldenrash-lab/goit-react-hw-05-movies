@@ -1,4 +1,3 @@
-import { getMovie } from 'API/movieDetail';
 import { StyledBtn, StyledBtnImage } from 'components/Button/Button.styled';
 import { Notify } from 'notiflix';
 import React, { useEffect, useState } from 'react';
@@ -18,6 +17,7 @@ import {
   TitleMovie,
   WrapperLinks,
 } from 'components/MovieDetails/MovieDetails.styled';
+import { getMovie } from 'API/api';
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);

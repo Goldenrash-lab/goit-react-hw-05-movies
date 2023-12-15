@@ -14,7 +14,9 @@ const SearchBar = () => {
   function handleSubmit(e) {
     e.preventDefault();
     const search = e.target.elements.search.value;
-    setSearchParams({ search });
+    if (search) {
+      setSearchParams({ search });
+    }
   }
   function handleChange(e) {
     setSearchMovie(e.target.value);

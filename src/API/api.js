@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const api = axios.create({
+const api = axios.create({
   baseURL: 'https://api.themoviedb.org',
 
   headers: {
@@ -12,3 +12,34 @@ export const api = axios.create({
     api_key: 'cce8025fc403310fa065589b0010d6be',
   },
 });
+
+export async function getCast(id) {
+  const { data } = await api(`/3/movie/${id}/credits`);
+  return data;
+}
+
+export async function getMovie(id) {
+  const { data } = await api(`/3/movie/${id}`);
+  return data;
+}
+
+export async function getReviews(id) {
+  const { data } = await api(`/3/movie/${id}/reviews`);
+  return data;
+}
+
+export async function getSearchMovie(q) {
+  const { data } = await api(`/3/search/movie`, {
+    params: {
+      query: q,
+    },
+  });
+  return data;
+}
+
+export async function getMoviesToday() {
+  const { data } = await api('/3/trending/all/day');
+  return data;
+}
+
+//cce8025fc403310fa065589b0010d6be

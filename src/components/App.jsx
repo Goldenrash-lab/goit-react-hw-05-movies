@@ -1,10 +1,5 @@
-import Layout from 'layout/layout';
-// import Home from 'pages/Home';
-// import MovieDetails from 'pages/MovieDetails';
-// import Movies from 'pages/Movies';
+import Layout from 'components/Layout/Layout';
 import { Route, Routes } from 'react-router-dom';
-// import Cast from './Cast/Cast';
-// import Reviews from './Reviews/Reviews';
 import { Suspense, lazy } from 'react';
 
 const Home = lazy(() => import('../pages/Home'));
